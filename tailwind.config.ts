@@ -20,6 +20,23 @@ const config: Config = {
         "black-50": "rgba(0, 0, 0, 0.5)",
         transparent: "rgba(0, 0, 0, 0)",
       },
+      screens: {
+        xs: {
+          max: "120px",
+        },
+        sm: {
+          max: "480px",
+        },
+        md: {
+          max: "768px",
+        },
+        lg: {
+          max: "976px",
+        },
+        xl: {
+          max: "1440px",
+        },
+      },
       boxShadow: {
         custom: "0 0 5px rgba(0, 0, 0, 0.1)",
       },
