@@ -27,13 +27,13 @@ const Banner = () => {
   return (
     <div
       ref={targetRef}
-      className="w-full h-[100vh] bg-[url('../../public/home/young_blue_men.png')] bg-cover bg-center bg-no-repeat relative"
+      className="w-full h-[100vh] bg-[url('../../public/home/nigerians.png')] bg-cover bg-center bg-no-repeat relative"
     >
       <div className="fixed z-50">
         <Navbar swap={swap} />
       </div>
-      <div className="bg-gradient-to-r md:bg-gradient-to-b from-black-50 to-transparent w-full h-full flex justify-between items-center px-20 md:px-5">
-        <div className="flex flex-col w-[45%] md:w-full gap-8">
+      <div className="bg-gradient-to-r md:bg-gradient-to-b from-black-50 to-transparent w-full h-full flex justify-between items-center px-40 md:px-5">
+        <div className="flex flex-col w-[35rem] md:w-full gap-8">
           <div className="w-full space-y-3">
             <div className="space-y-2">
               <div className="text-sm font-bold text-primary bg-blue-200 px-3 py-1 rounded-full w-fit">

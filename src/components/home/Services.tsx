@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ import { PiBuildingOfficeFill } from "react-icons/pi";
 import { FaWifi } from "react-icons/fa6";
 import { IconType } from "react-icons";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 interface iService {
   name: string;
@@ -22,17 +22,17 @@ const Services = () => {
   const services: iService[] = [
     {
       link: "/",
-      name: "Corporate Internet",
-      icon: PiBuildingOfficeFill,
-      description:
-        "Designed for companies of all sizes, our fiber connections offer unparalleled speed and reliability.",
-    },
-    {
-      link: "/",
       name: "Home Internet",
       icon: TbHomeFilled,
       description:
         "Our Fiber to the Home (FTTH) service ensures minimal maintenance and maximum performance.",
+    },
+    {
+      link: "/",
+      name: "Corporate Internet",
+      icon: PiBuildingOfficeFill,
+      description:
+        "Designed for companies of all sizes, our fiber connections offer unparalleled speed and reliability.",
     },
     {
       link: "/",
@@ -43,11 +43,14 @@ const Services = () => {
     },
   ];
 
+  const targetRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(targetRef, { amount: "some" });
+
   return (
     <div className="flex flex-col w-full gap-8 items-center px-20 relative">
       <div className="w-[40rem] items-center gap-3">
         <h2 className="text-title text-center text-dark">
-          Our Special Service For You
+          Our Special Services For You
         </h2>
         <h3 className="text-small text-center text-neutral">
           Discover how our innovative technology and customer-centric approach
@@ -55,7 +58,10 @@ const Services = () => {
           aspect of your digital life.
         </h3>
       </div>
-      <div className="w-full flex gap-8 items-center justify-center z-10">
+      <div
+        ref={targetRef}
+        className="w-full flex gap-8 items-center justify-center z-10"
+      >
         {services.map((service, i) => {
           const Icon = service.icon;
           return (
@@ -69,8 +75,18 @@ const Services = () => {
                   bounce: 0.6,
                 },
               }}
+              animate={{
+                y: isInView ? "0%" : "20%",
+                transition: {
+                  ease: "easeIn",
+                  duration: 1,
+                  delay: i * 0.75,
+                  type: "spring",
+                  bounce: 0.7,
+                },
+              }}
               key={i}
-              className={`text-secondary flex flex-col items-center gap-3 w-[20%] h-[15rem] px-4 py-4 bg-white 
+              className={`text-primary-accent flex flex-col items-center gap-3 w-[20%] h-[15rem] px-4 py-4 bg-white 
                  shadow-custom 
                  ${
                    i === 0
@@ -86,7 +102,10 @@ const Services = () => {
               <p className="text-small font-medium text-dark text-center">
                 {service.description}
               </p>
-              <Link href={service.link} className="font-bold text-subbody">
+              <Link
+                href={service.link}
+                className="font-bold text-primary text-subbody"
+              >
                 Learn More
               </Link>
             </motion.div>
@@ -103,7 +122,7 @@ const Services = () => {
             repeat: Infinity,
           },
         }}
-        className="bg-secondary-accent bg-opacity-10 rounded-2xl size-[400px] absolute -left-[100px] top-[60px]"
+        className="bg-secondary-accent bg-opacity-10 rounded-2xl size-[350px] absolute -left-[100px] top-[60px]"
       />
       <motion.div
         animate={{
@@ -114,7 +133,7 @@ const Services = () => {
             repeat: Infinity,
           },
         }}
-        className="bg-secondary-accent bg-opacity-10 rounded-full size-[400px] absolute -right-[100px] top-[60px]"
+        className="bg-secondary-accent bg-opacity-10 rounded-full size-[250px] absolute -right-[100px] top-[60px]"
       />
     </div>
   );

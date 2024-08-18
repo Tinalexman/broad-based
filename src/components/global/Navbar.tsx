@@ -28,7 +28,9 @@ const Navbar: FC<{ swap: boolean }> = ({ swap }) => {
   ];
   return (
     <nav
-      className={`px-20  grid grid-cols-[3fr_1fr] ease-out duration-200 transition-colors md:grid-cols-2 place-content-center md:place-content-start md:place-items-start w-full h-20`}
+      className={`px-40 ${
+        swap ? "bg-[#FBFBFB] shadow-custom" : "bg-transparent"
+      } grid grid-cols-[3fr_1fr] ease-out duration-75 transition-all md:grid-cols-2 place-content-center md:place-content-start md:place-items-start w-full h-20`}
     >
       <Logo />
       <div className="flex gap-8 items-center md:hidden">
