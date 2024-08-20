@@ -67,7 +67,7 @@ const Services = () => {
           return (
             <motion.div
               whileHover={{
-                scale: 1.1,
+                scale: 1.02,
                 transition: {
                   duration: 0.3,
                   ease: "easeIn",

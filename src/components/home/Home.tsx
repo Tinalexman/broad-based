@@ -3,6 +3,7 @@ import EndUsers from "./EndUsers";
 import Services from "./Services";
 import Reasons from "./Reasons";
 import Location from "./Location";
+import Plans from "./Plans";
 
 const Home = () => {
   return (
@@ -14,7 +15,7 @@ const Home = () => {
       <Location />
       <div className="h-20" />
       <Reasons />
-      <div className="h-40" />
+      <Plans />
     </div>
   );
 };

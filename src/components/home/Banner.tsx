@@ -54,7 +54,7 @@ const Banner = () => {
               />
             </div>
 
-            <h2 className="text-subdisplay text-[#F9F9F9]">
+            <h2 className="text-subdisplay font-medium text-[#F9F9F9]">
               Stay Connected Without Interuptions with our Blazing Fast Internet
               for All Your Needs
             </h2>
