@@ -47,7 +47,7 @@ const Services = () => {
   const isInView = useInView(targetRef, { amount: "some" });
 
   return (
-    <div className="flex flex-col w-full gap-8 items-center px-20 relative">
+    <div className="flex flex-col w-full gap-8 items-center px-20 py-20 relative">
       <div className="w-[40rem] items-center gap-3">
         <h2 className="text-title text-center text-dark">
           Our Special Services For You
@@ -86,7 +86,7 @@ const Services = () => {
                 },
               }}
               key={i}
-              className={`text-primary-accent flex flex-col items-center gap-3 w-[20%] h-[15rem] px-4 py-4 bg-white 
+              className={` hover:bg-opacity-40  text-primary flex flex-col items-center gap-3 w-[20%] h-[15rem] px-4 py-4 bg-white 
                  shadow-custom 
                  ${
                    i === 0
@@ -102,10 +102,7 @@ const Services = () => {
               <p className="text-small font-medium text-dark text-center">
                 {service.description}
               </p>
-              <Link
-                href={service.link}
-                className="font-bold text-primary text-subbody"
-              >
+              <Link href={service.link} className="font-bold text-subbody">
                 Learn More
               </Link>
             </motion.div>
