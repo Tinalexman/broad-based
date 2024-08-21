@@ -60,8 +60,9 @@ const Navbar: FC<{ swap: boolean }> = ({ swap }) => {
           />
         </div>
       </nav>
+      { opened &&
       <Drawer
-        opened={opened}
+        opened={true}
         onClose={close}
         position="right"
         size={"80%"}
@@ -86,6 +87,7 @@ const Navbar: FC<{ swap: boolean }> = ({ swap }) => {
           </div>
         </div>
       </Drawer>
+      }
     </>
   );
 };
