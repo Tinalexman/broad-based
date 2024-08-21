@@ -25,7 +25,7 @@ const Reasons = () => {
             ease: "easeOut",
           },
         }}
-        className="w-full h-[550px] rounded object-cover"
+        className="w-full h-[550px] rounded object-cover block md:hidden"
       >
         <Image
           src={Man}
@@ -45,14 +45,14 @@ const Reasons = () => {
         className="w-full flex flex-col gap-5"
       >
         <div className="flex flex-col gap-2">
-          <h2 className="text-title text-dark">
+          <h2 className="text-title md:text-center text-dark">
             Why Choose{" "}
             <span className="text-primary">
               Broad<span className="text-secondary">based</span>
             </span>
             ?
           </h2>
-          <p className="text-body text-dark font-medium">
+          <p className="text-body text-dark font-medium md:text-center">
             At Broadbased, we believe in delivering more than just internet
             service; we provide a gateway to endless possibilities. Our
             commitment to reliability, coupled with our customer-centric
@@ -87,6 +87,23 @@ const Reasons = () => {
       </motion.div>
       <motion.div
         animate={{
+          opacity: isInView ? 1 : 0,
+          y: isInView ? 0 : -100,
+          transition: {
+            duration: 1,
+            ease: "easeOut",
+          },
+        }}
+        className="w-full h-[550px] rounded object-cover md:block hidden"
+      >
+        <Image
+          src={Man}
+          alt="man browsing"
+          className="w-full h-full rounded object-cover"
+        />
+      </motion.div>
+      <motion.div
+        animate={{
           scale: [1.0, 1.2, 1.0],
           transition: {
             duration: 3.5,
@@ -94,7 +111,7 @@ const Reasons = () => {
             repeat: Infinity,
           },
         }}
-        className="size-[150px] border-2 border-secondary border-opacity-30 rounded-full absolute -right-[60px] bottom-0"
+        className="size-[150px] md:size-[120px] border-2 border-secondary border-opacity-30 rounded-full absolute md:-right-[80px] -right-[60px] bottom-0"
       />
       <motion.div
         animate={{
@@ -106,7 +123,7 @@ const Reasons = () => {
             delay: 0.5,
           },
         }}
-        className="size-[150px] border-2 border-secondary border-opacity-30 rounded-full absolute -right-[20px] bottom-0"
+        className="size-[150px] md:size-[120px] border-2 border-secondary border-opacity-30 rounded-full absolute md:-right-[100px] -right-[20px] bottom-0"
       />
 
       <motion.div
@@ -118,7 +135,7 @@ const Reasons = () => {
             repeat: Infinity,
           },
         }}
-        className="size-[150px] border-2 border-secondary border-opacity-30 rounded-full absolute -left-[80px] top-0"
+        className="size-[150px] md:size-[120px] border-2 border-secondary border-opacity-30 rounded-full absolute -left-[80px] md:-left-[100px] top-0"
       />
       <motion.div
         animate={{
@@ -130,7 +147,7 @@ const Reasons = () => {
             delay: 0.5,
           },
         }}
-        className="size-[150px] border-2 border-secondary border-opacity-30 rounded-full absolute -left-[40px] top-0"
+        className="size-[150px] md:size-[120px] border-2 border-secondary border-opacity-30 rounded-full absolute -left-[40px] md:-left-[80px] top-0"
       />
     </div>
   );

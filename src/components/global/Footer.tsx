@@ -14,11 +14,11 @@ const Footer = () => {
   return (
     <footer className="py-20 px-40 md:px-5 md:py-10 grid grid-cols-[1fr_1fr_1.5fr] md:grid-cols-1 gap-10 w-full">
       <div className="w-full flex flex-col">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 md:gap-2">
           <h2 className="text-4xl md:text-2xl text-primary font-bold">
             Broad<span className="text-secondary">based</span>{" "}
           </h2>
-          <p className="font-medium text-body mt-5 ">
+          <p className="font-medium text-body mt-5">
             Empowering your digital journey with innovative, reliable solutions
             for a brighter tomorrow.
           </p>
@@ -45,13 +45,13 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-2 border-grey-18 text-neutral text-small">
+          <div className="mt-2 border-grey-18 text-neutral text-small md:hidden">
             © Copyright {new Date().getFullYear()}, All Rights Reserved
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-around pt-20">
-        <div className="flex flex-col gap-5">
+      <div className="w-full flex md:flex-col justify-around pt-20 md:gap-3 md:pt-0">
+        <div className="flex flex-col gap-5 md:gap-3">
           <Link href={"/"} className="text-body font-semibold ">
             Home
           </Link>
@@ -59,7 +59,7 @@ const Footer = () => {
             About
           </Link>
         </div>
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 md:gap-3">
           <Link href={"/"} className="text-body font-semibold ">
             Services
           </Link>
@@ -68,8 +68,11 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col md:hidden">
         <Image src={Icon} alt="logo" className="w-full h-auto" />
+      </div>
+      <div className="mt-2 border-grey-18 text-neutral text-small text-center md:block hidden">
+        © Copyright {new Date().getFullYear()}, All Rights Reserved
       </div>
     </footer>
   );

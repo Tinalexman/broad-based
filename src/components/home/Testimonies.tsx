@@ -28,22 +28,22 @@ const Testimonies = () => {
   });
 
   return (
-    <div className="w-full flex flex-col gap-5 relative py-20">
-      <div className="flex gap-5 items-center px-40">
-        <h2 className="text-title text-dark w-[18rem]">
+    <div className="w-full flex flex-col gap-5 relative py-20 md:py-10">
+      <div className="flex md:flex-col gap-5 items-center px-40 md:px-5">
+        <h2 className="text-title md:text-center text-dark w-[18rem] md:w-full">
           Hear from Our Happy Customers
         </h2>
-        <h3 className="text-small text-neutral w-[30rem]">
+        <h3 className="text-subbody md:text-center text-neutral w-[30rem] md:w-full">
           See firsthand accounts of transformation and success stories from
           individuals and businesses who&apos;ve experienced unparalleled growth
           and satisfaction through our innovative solutions.
         </h3>
       </div>
 
-      <Marquee speed={10}>
+      <Marquee speed={15}>
         {testimonies.map((tst, i) => (
           <div key={i} className="px-5 py-2">
-            <div className="w-[20rem] h-[9rem] px-3 py-2 flex flex-col gap-5 rounded bg-white shadow-custom">
+            <div className="w-[20rem] md:w-[18rem] h-[9rem] px-3 py-2 flex flex-col gap-5 rounded bg-white shadow-custom">
               <div className="flex w-full justify-between items-center">
                 <Image
                   src={tst.image}
@@ -72,7 +72,9 @@ const Testimonies = () => {
                     ))}
                 </div>
               </div>
-              <p className="text-small font-medium">{tst.message}</p>
+              <p className="text-small font-medium md:text-center">
+                {tst.message}
+              </p>
             </div>
           </div>
         ))}

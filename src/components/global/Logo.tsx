@@ -9,9 +9,9 @@ const Logo = () => {
       <Image
         src={Icon}
         alt="logo"
-        className="w-16 md:w-8 h-auto object-cover"
+        className="w-16 md:w-12 h-auto object-cover"
       />
-      <h2 className="text-2xl md:text-lg text-primary font-bold">
+      <h2 className="text-2xl md:text-xl text-primary font-bold">
         Broad<span className="text-secondary">based</span>{" "}
       </h2>
     </div>

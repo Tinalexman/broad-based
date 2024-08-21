@@ -47,11 +47,11 @@ const Services = () => {
 
   return (
     <div className="flex flex-col w-full gap-8 items-center px-20 md:px-5 py-20 md:py-10 relative md:overflow-hidden">
-      <div className="w-[40rem] md:w-full items-center gap-3">
+      <div className="w-[40rem] md:w-full items-center space-y-2 md:space-y-3">
         <h2 className="text-title text-center text-dark">
-          Our Specialized Services for You
+          Our Specialized Services
         </h2>
-        <h3 className="text-small text-center text-neutral">
+        <h3 className="text-subbody text-center text-neutral">
           Discover our latest tech and customer-first strategies that transform
           internet, network aggregation, and voice communication.
         </h3>
@@ -105,7 +105,7 @@ const Services = () => {
             repeat: Infinity,
           },
         }}
-        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -left-[100px] md:-left-[250px] top-[60px]"
+        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -left-[100px] md:-left-[300px] top-[60px]"
       />
 
       <motion.div
@@ -118,7 +118,7 @@ const Services = () => {
             delay: 2,
           },
         }}
-        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -right-[100px] md:-right-[250px] bottom-[60px]"
+        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -right-[100px] md:-right-[300px] bottom-[60px]"
       />
     </div>
   );

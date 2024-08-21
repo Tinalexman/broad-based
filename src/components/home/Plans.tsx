@@ -63,11 +63,11 @@ const Plans = () => {
 
   return (
     <div className="flex flex-col w-full gap-8 items-center px-40 py-20 md:px-5 md:py-10 relative">
-      <div className="w-[40rem] md:w-full items-center gap-3">
+      <div className="w-[40rem] md:w-full items-center space-y-2 md:space-y-3">
         <h2 className="text-title text-center text-dark">
           Our Best Value Internet Packages
         </h2>
-        <h3 className="text-small text-center text-neutral">
+        <h3 className="text-subbody text-center text-neutral">
           Explore Our Tailored Packages Designed to Elevate Your Connectivity
           Experience
         </h3>

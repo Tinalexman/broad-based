@@ -12,17 +12,22 @@ const Contact = () => {
   return (
     <div
       ref={ref}
-      className="w-full flex flex-col place-content-center place-items-center gap-10 px-40 py-20"
+      className="w-full flex flex-col place-content-center place-items-center gap-10 px-40 md:px-5 py-20 md:py-10"
     >
       <div className="w-full flex flex-col">
         <div className="flex flex-col gap-2 h-32 w-full">
-          <h2 className="text-title text-dark">Send Us A Message</h2>
-          <p className="text-body text-dark font-medium w-1/2">
+          <h2 className="text-title text-dark md:text-center">
+            Send Us A Message
+          </h2>
+          <p className="text-subbody md:text-center text-dark font-medium w-1/2 md:w-full">
             Let&apos;s Craft Your Digital Future Together: Share Your Needs and
             We&apos;ll Deliver Excellence in Every Connection.
           </p>
         </div>
-        <div ref={ref} className="w-full grid grid-cols-2 gap-10">
+        <div
+          ref={ref}
+          className="w-full grid grid-cols-2 md:grid-cols-1 gap-10"
+        >
           <motion.div
             animate={{
               x: isInView ? "0%" : "-100%",
@@ -69,7 +74,7 @@ const Contact = () => {
                 ease: "easeOut",
               },
             }}
-            className="w-full flex flex-col justify-between h-full"
+            className="w-full flex flex-col md:gap-5 justify-between h-full"
           >
             <div className="w-full rounded bg-white shadow-custom flex flex-col px-4 py-3 gap-5">
               <FaMapLocationDot size={36} className="text-secondary" />

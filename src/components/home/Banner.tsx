@@ -32,27 +32,22 @@ const Banner = () => {
       <div className="fixed z-50">
         <Navbar swap={swap} />
       </div>
-      <div className="bg-gradient-to-r md:bg-gradient-to-b from-black-70 to-transparent w-full h-full flex justify-between items-center px-40 md:px-5">
-        <div className="flex flex-col w-[35rem] md:w-full gap-8">
+      <div className="bg-gradient-to-r md:bg-gradient-to-b from-black-70 to-transparent w-full h-full flex justify-between items-center px-40 md:px-5 md:py-10">
+        <div className="flex flex-col w-[35rem] md:w-full md:h-full md:justify-between gap-8 md:pt-[20vh]">
           <div className="w-full space-y-3">
-            <div className="space-y-2">
-              <div className="text-sm font-bold text-primary bg-blue-200 px-3 py-1 rounded-full w-fit">
-                READY TO HELP YOU!
-              </div>
-              <TypeAnimation
-                sequence={[
-                  "The Best Telecommunications Service in Nigeria.",
-                  1500,
-                  "The Best Telecommunications Service near you.",
-                  3000,
-                ]}
-                preRenderFirstString
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-                className="text-white text-display"
-              />
-            </div>
+            <TypeAnimation
+              sequence={[
+                "The Best Telecommunications Service in Nigeria.",
+                1500,
+                "The Best Telecommunications Service near you.",
+                3000,
+              ]}
+              preRenderFirstString
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+              className="text-white text-display"
+            />
 
             <h2 className="text-subdisplay font-medium text-[#F2F2F2]">
               Get uninterrupted internet, network merging, and clear voice calls

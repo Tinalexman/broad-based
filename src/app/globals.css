@@ -19,7 +19,7 @@ body {
 }
 
 .text-subtitle {
-  @apply text-[1.8rem] md:text-[1.2rem] leading-[2.5rem] md:leading-[1.8rem] font-bold;
+  @apply text-[1.85rem] md:text-[1.4rem] leading-[2.7rem] md:leading-[2rem] font-bold;
 }
 
 .text-subdisplay {
