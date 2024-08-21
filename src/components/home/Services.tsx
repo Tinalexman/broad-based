@@ -76,7 +76,7 @@ const Services = () => {
               }}
               className={` text-dark flex flex-col items-center gap-6 w-[18rem] h-[15rem] px-4 py-4`}
             >
-              <Icon size={60} className="text-primary" />
+              <Icon size={60} className="text-secondary" />
               <div className="flex flex-col gap-2 items-center">
                 <p className="text-subdisplay font-bold text-center text-dark">
                   {service.name}

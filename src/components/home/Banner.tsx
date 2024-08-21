@@ -59,7 +59,7 @@ const Banner = () => {
               with our all-in-one telecom services.
             </h2>
           </div>
-          <button className="text-white text-button flex items-center justify-center gap-2 rounded bg-primary px-2 py-3 w-44  mt-2">
+          <button className="text-white text-button flex items-center justify-center gap-2 rounded bg-primary px-2 py-3 w-44 mt-2">
             Get Started
             <motion.div
               initial={{

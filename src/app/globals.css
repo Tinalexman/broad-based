@@ -58,3 +58,11 @@ body {
 .scrollbar-custom::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+input {
+  @apply focus:outline-none focus:ring-2 focus:ring-[#D25917] focus:border-transparent;
+}
+
+textarea {
+  @apply focus:outline-none focus:ring-2 focus:ring-[#D25917] focus:border-transparent resize-none;
+}

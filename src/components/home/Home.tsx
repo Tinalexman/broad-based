@@ -6,13 +6,14 @@ import Plans from "./Plans";
 import Testimonies from "./Testimonies";
 import GetStarted from "./GetStarted";
 import Contact from "./Contact";
+import Footer from "../global/Footer";
 
 const Home = () => {
   return (
     <div className="bg-background w-[100vw]">
       <Banner />
       <Services />
-      <div className="h-20" />
+      <div className="h-10" />
       <Location />
       <div className="h-20" />
       <Reasons />
@@ -21,6 +22,7 @@ const Home = () => {
       <div className="h-20" />
       <GetStarted />
       <Contact />
+      <Footer />
     </div>
   );
 };

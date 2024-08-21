@@ -93,7 +93,7 @@ const Plans = () => {
                 transition: {
                   ease: "easeIn",
                   duration: 1,
-                  delay: i * 0.75,
+                  delay: i * 0.25,
                   type: "spring",
                   bounce: 0.7,
                 },
