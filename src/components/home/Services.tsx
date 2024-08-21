@@ -46,8 +46,8 @@ const Services = () => {
   const isInView = useInView(targetRef, { amount: "some", once: true });
 
   return (
-    <div className="flex flex-col w-full gap-8 items-center px-20 py-20 relative">
-      <div className="w-[40rem] items-center gap-3">
+    <div className="flex flex-col w-full gap-8 items-center px-20 md:px-5 py-20 md:py-10 relative md:overflow-hidden">
+      <div className="w-[40rem] md:w-full items-center gap-3">
         <h2 className="text-title text-center text-dark">
           Our Specialized Services for You
         </h2>
@@ -58,7 +58,7 @@ const Services = () => {
       </div>
       <div
         ref={targetRef}
-        className="w-full flex gap-8 items-center justify-center z-10"
+        className="w-full flex md:flex-col gap-8 items-center justify-center z-10"
       >
         {services.map((service, i) => {
           const Icon = service.icon;
@@ -74,7 +74,7 @@ const Services = () => {
                   delay: i * 0.2,
                 },
               }}
-              className={` text-dark flex flex-col items-center gap-6 w-[18rem] h-[15rem] px-4 py-4`}
+              className={`text-dark flex flex-col items-center gap-6 w-[18rem] h-[15rem] px-4 py-4`}
             >
               <Icon size={60} className="text-secondary" />
               <div className="flex flex-col gap-2 items-center">
@@ -105,7 +105,7 @@ const Services = () => {
             repeat: Infinity,
           },
         }}
-        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -left-[100px] top-[60px]"
+        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -left-[100px] md:-left-[250px] top-[60px]"
       />
 
       <motion.div
@@ -118,7 +118,7 @@ const Services = () => {
             delay: 2,
           },
         }}
-        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -right-[100px] bottom-[60px]"
+        className="bg-secondary-accent bg-opacity-5 rounded-2xl size-[350px] absolute -right-[100px] md:-right-[250px] bottom-[60px]"
       />
     </div>
   );

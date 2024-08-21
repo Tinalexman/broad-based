@@ -62,8 +62,8 @@ const Plans = () => {
   const [index, setIndex] = useState<number>(-1);
 
   return (
-    <div className="flex flex-col w-full gap-8 items-center px-40 py-20 relative">
-      <div className="w-[40rem] items-center gap-3">
+    <div className="flex flex-col w-full gap-8 items-center px-40 py-20 md:px-5 md:py-10 relative">
+      <div className="w-[40rem] md:w-full items-center gap-3">
         <h2 className="text-title text-center text-dark">
           Our Best Value Internet Packages
         </h2>
@@ -74,7 +74,7 @@ const Plans = () => {
       </div>
       <div
         ref={targetRef}
-        className="w-full grid grid-cols-3 gap-8 place-items-center px-10"
+        className="w-full grid grid-cols-3 md:grid-cols-1 gap-8 place-items-center px-10 md:px-0"
       >
         {plans.map((plan, i) => {
           return (
@@ -109,10 +109,10 @@ const Plans = () => {
               className={`${
                 index === i ? "bg-secondary text-white" : "text-dark bg-white"
               } flex flex-col items-center gap-6 w-full h-[25rem] px-4 py-8 
-                 shadow-custom 
+                 shadow-custom md:rounded-2xl
                  ${
                    i === 0
-                     ? "rounded-l-2xl"
+                     ? "rounded-l-2xl "
                      : i === 2
                      ? "rounded-r-2xl"
                      : "rounded-none"

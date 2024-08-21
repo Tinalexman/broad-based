@@ -17,7 +17,7 @@ const Location = () => {
   return (
     <div
       ref={ref}
-      className="w-full grid grid-cols-2 place-content-center place-items-center gap-10 px-40"
+      className="w-full grid grid-cols-2 md:grid-cols-1 place-content-center place-items-center gap-10 px-40 md:px-5"
     >
       <motion.div
         animate={{
@@ -31,10 +31,10 @@ const Location = () => {
         className="w-full flex flex-col gap-5"
       >
         <div className="flex flex-col gap-2">
-          <h2 className="text-title text-dark">
+          <h2 className="text-title text-dark md:text-center">
             Empowering Nigeria with High-Speed Internet
           </h2>
-          <p className="text-body text-dark font-medium">
+          <p className="text-body text-dark font-medium md:text-center">
             As pioneers in the telecommunications industry, we are proud to
             offer{" "}
             <span className="font-bold">

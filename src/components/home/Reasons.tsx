@@ -14,7 +14,7 @@ const Reasons = () => {
   return (
     <div
       ref={ref}
-      className="w-full grid grid-cols-2 place-items-center gap-10 px-40 relative"
+      className="w-full grid grid-cols-2 md:grid-cols-1 place-items-center gap-10 px-40 md:px-5 relative"
     >
       <motion.div
         animate={{

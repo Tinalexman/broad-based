@@ -12,7 +12,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="py-20 px-40 grid grid-cols-[1fr_1fr_1.5fr] gap-10">
+    <footer className="py-20 px-40 md:px-5 md:py-10 grid grid-cols-[1fr_1fr_1.5fr] md:grid-cols-1 gap-10 w-full">
       <div className="w-full flex flex-col">
         <div className="flex flex-col gap-5">
           <h2 className="text-4xl md:text-2xl text-primary font-bold">
