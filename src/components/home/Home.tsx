@@ -3,10 +3,11 @@ import Services from "./Services";
 import Reasons from "./Reasons";
 import Location from "./Location";
 import Plans from "./Plans";
+import Testimonies from "./Testimonies";
 
 const Home = () => {
   return (
-    <div className="bg-[#FBFBFB] w-[100vw]">
+    <div className="bg-background w-[100vw]">
       <Banner />
       <Services />
       <div className="h-20" />
@@ -14,6 +15,7 @@ const Home = () => {
       <div className="h-20" />
       <Reasons />
       <Plans />
+      <Testimonies />
     </div>
   );
 };

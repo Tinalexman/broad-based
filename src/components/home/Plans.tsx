@@ -65,7 +65,7 @@ const Plans = () => {
     <div className="flex flex-col w-full gap-8 items-center px-40 py-20 relative">
       <div className="w-[40rem] items-center gap-3">
         <h2 className="text-title text-center text-dark">
-          Our Best Value Packages
+          Our Best Value Internet Packages
         </h2>
         <h3 className="text-small text-center text-neutral">
           Explore Our Tailored Packages Designed to Elevate Your Connectivity

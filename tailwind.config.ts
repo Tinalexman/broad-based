@@ -17,7 +17,8 @@ const config: Config = {
         "neutral-accent": "#afa8ba",
         light: "#F2F2F2",
         dark: "#131313",
-        "black-50": "rgba(0, 0, 0, 0.5)",
+        background: "#FBFBFB",
+        "black-70": "rgba(0, 0, 0, 0.7)",
         transparent: "rgba(0, 0, 0, 0)",
       },
       screens: {

@@ -32,7 +32,7 @@ const Banner = () => {
       <div className="fixed z-50">
         <Navbar swap={swap} />
       </div>
-      <div className="bg-gradient-to-r md:bg-gradient-to-b from-black-50 to-transparent w-full h-full flex justify-between items-center px-40 md:px-5">
+      <div className="bg-gradient-to-r md:bg-gradient-to-b from-black-70 to-transparent w-full h-full flex justify-between items-center px-40 md:px-5">
         <div className="flex flex-col w-[35rem] md:w-full gap-8">
           <div className="w-full space-y-3">
             <div className="space-y-2">
@@ -41,9 +41,9 @@ const Banner = () => {
               </div>
               <TypeAnimation
                 sequence={[
-                  "The Best Internet Service Provider in the country.",
+                  "The Best Telecommunications Service in Nigeria.",
                   1500,
-                  "The Best Internet Service Provider in Nigeria.",
+                  "The Best Telecommunications Service near you.",
                   3000,
                 ]}
                 preRenderFirstString
@@ -54,9 +54,9 @@ const Banner = () => {
               />
             </div>
 
-            <h2 className="text-subdisplay font-medium text-[#F9F9F9]">
-              Stay Connected Without Interuptions with our Blazing Fast Internet
-              for All Your Needs
+            <h2 className="text-subdisplay font-medium text-[#F2F2F2]">
+              Get uninterrupted internet, network merging, and clear voice calls
+              with our all-in-one telecom services.
             </h2>
           </div>
           <button className="text-white text-button flex items-center justify-center gap-2 rounded bg-primary px-2 py-3 w-44  mt-2">
