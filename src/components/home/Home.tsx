@@ -4,6 +4,7 @@ import Reasons from "./Reasons";
 import Location from "./Location";
 import Plans from "./Plans";
 import Testimonies from "./Testimonies";
+import GetStarted from "./GetStarted";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
       <Reasons />
       <Plans />
       <Testimonies />
+      <div className="h-20" />
+      <GetStarted />
     </div>
   );
 };

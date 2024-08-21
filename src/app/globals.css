@@ -10,6 +10,10 @@ body {
   @apply text-[4rem] md:text-[2rem] leading-[4.5rem] md:leading-[2.5rem] font-semibold;
 }
 
+.text-extra {
+  @apply text-[3rem] md:text-[2rem] leading-[4rem] md:leading-[2.5rem] font-medium;
+}
+
 .text-title {
   @apply text-[2rem] md:text-[1.5rem] leading-[3rem] md:leading-[1.8rem] font-bold;
 }

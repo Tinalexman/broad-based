@@ -5,6 +5,8 @@ import React from "react";
 import Image from "next/image";
 import Dog from "@/public/home/dog.jpg";
 
+import Marquee from "react-fast-marquee";
+import { FaStar } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 interface iTestimony {
@@ -38,28 +40,43 @@ const Testimonies = () => {
         </h3>
       </div>
 
-      <div className="w-[100vw] h-[11rem]  gap-10 flex scrollbar-custom overflow-x-scroll z-10">
+      <Marquee speed={10}>
         {testimonies.map((tst, i) => (
-          <div
-            key={i}
-            className="w-[20rem] h-[10rem] rounded bg-white shadow-custom"
-          >
-            <div className="w-[40rem] h-full py-3 px-5 flex flex-col">
+          <div key={i} className="px-5 py-2">
+            <div className="w-[20rem] h-[9rem] px-3 py-2 flex flex-col gap-5 rounded bg-white shadow-custom">
               <div className="flex w-full justify-between items-center">
-                <div className="flex gap-3 items-center w-fit">
-                  <Image
-                    src={tst.image}
-                    alt={tst.name}
-                    width={48}
-                    height={48}
-                    className="size-12 rounded-full"
-                  />
+                <Image
+                  src={tst.image}
+                  alt={tst.name}
+                  width={48}
+                  height={48}
+                  className="size-12 rounded-full"
+                />
+                <div className="flex flex-col w-fit">
+                  <h2 className="text-button font-semibold">{tst.name}</h2>
+                  <p className="text-small font-medium">{tst.role}</p>
+                </div>
+                <div className="w-fit gap-[2px] flex items-center">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, i) => (
+                      <FaStar
+                        key={i}
+                        className={`${
+                          i + 1 <= tst.rating
+                            ? "text-secondary-accent"
+                            : "text-gray-300"
+                        }`}
+                        size={14}
+                      />
+                    ))}
                 </div>
               </div>
+              <p className="text-small font-medium">{tst.message}</p>
             </div>
           </div>
         ))}
-      </div>
+      </Marquee>
 
       <motion.div
         animate={{
