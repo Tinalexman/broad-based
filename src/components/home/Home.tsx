@@ -5,6 +5,7 @@ import Location from "./Location";
 import Plans from "./Plans";
 import Testimonies from "./Testimonies";
 import GetStarted from "./GetStarted";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonies />
       <div className="h-20" />
       <GetStarted />
+      <Contact />
     </div>
   );
 };
