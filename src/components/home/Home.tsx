@@ -10,7 +10,7 @@ import Footer from "../global/Footer";
 
 const Home = () => {
   return (
-    <div className="bg-background w-[100vw]">
+    <div className="bg-background w-[100vw] overflow-x-hidden">
       <Banner />
       <Services />
       <div className="h-10" />

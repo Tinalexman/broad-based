@@ -38,7 +38,7 @@ const Navbar: FC<{ swap: boolean }> = ({ swap }) => {
       <nav
         className={`px-40 md:px-5 ${
           swap ? "bg-[#FBFBFB] shadow-custom" : "bg-transparent"
-        } grid grid-cols-[3fr_1fr] ease-out duration-75 transition-all md:grid-cols-2 place-content-center md:place-content-center md:place-items-start w-full h-20 md:h-14`}
+        } grid grid-cols-[3fr_1fr] ease-out duration-75 transition-all md:grid-cols-2 place-content-center md:place-content-center md:place-items-start w-full h-20 md:h-16`}
       >
         <Logo />
         <div className="flex gap-8 items-center md:hidden">
@@ -60,34 +60,34 @@ const Navbar: FC<{ swap: boolean }> = ({ swap }) => {
           />
         </div>
       </nav>
-      { opened &&
-      <Drawer
-        opened={true}
-        onClose={close}
-        position="right"
-        size={"80%"}
-        top={0}
-        radius={8}
-      >
-        <div className="w-full h-full flex flex-col gap-10">
-          <Logo />
-          <div className="flex flex-col gap-3 w-full">
-            {navs.map((navItem, i) => (
-              <div
-                onClick={() => {
-                  close();
-                  window.location.assign(navItem.link);
-                }}
-                key={i}
-                className={`font-semibold text-dark`}
-              >
-                {navItem.name}
-              </div>
-            ))}
+      {opened && (
+        <Drawer
+          opened={true}
+          onClose={close}
+          position="right"
+          size={"80%"}
+          top={0}
+          radius={8}
+        >
+          <div className="w-full h-full flex flex-col gap-10">
+            <Logo />
+            <div className="flex flex-col gap-3 w-full">
+              {navs.map((navItem, i) => (
+                <div
+                  onClick={() => {
+                    close();
+                    window.location.assign(navItem.link);
+                  }}
+                  key={i}
+                  className={`font-semibold text-dark`}
+                >
+                  {navItem.name}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </Drawer>
-      }
+        </Drawer>
+      )}
     </>
   );
 };
